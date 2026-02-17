@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integralink 설치 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc; /* Slate 50 */
+        }
+        .guide-card {
+            background: white;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .step-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+            flex-shrink: 0;
+            z-index: 10;
+        }
+        .step-line {
+            position: absolute;
+            left: 15px;
+            top: 40px;
+            bottom: -20px;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+        .ribbon-label {
+            font-size: 10px;
+            color: #64748b;
+            text-align: center;
+            margin-top: auto;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+        /* Infinity Icon Gradient */
+        .infinity-gradient {
+            background: linear-gradient(90deg, #0ea5e9, #2563eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+        }
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="guide-card w-full max-w-3xl border border-slate-100">
+        
+        <!-- Header Section -->
+        <header class="bg-white pt-12 pb-8 px-8 text-center border-b border-slate-100">
+            <div class="inline-block mb-2 px-3 py-1 bg-blue-50 text-blue-600 text-xs font-bold rounded-full tracking-wide uppercase">Installation Guide</div>
+            <h1 class="text-3xl md:text-4xl font-black text-slate-800 mb-2 tracking-tight">Integralink 설치 가이드</h1>
+            <p class="text-slate-500 font-medium">Windows / Mac 통합 가이드</p>
+        </header>
+
+        <div class="p-8 md:p-12 space-y-12 bg-white relative">
+
+            <!-- Step 1 -->
+            <div class="flex gap-5 relative">
+                <div class="step-line"></div>
+                <div class="step-badge">1</div>
+                <div class="flex-1 pt-1">
+                    <h2 class="text-lg font-bold mb-3 text-slate-800">파일 준비</h2>
+                    <div class="bg-slate-50 border border-slate-100 rounded-xl p-4 flex items-center gap-4">
+                        <div class="p-3 bg-white rounded-lg shadow-sm text-yellow-500">
+                            <i class="fa-solid fa-folder-open text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-slate-600 leading-relaxed">
+                            <p class="font-medium text-slate-800 mb-1">다운로드 받은 압축 파일을 풀어주세요.</p>
+                            <p class="text-xs text-slate-500">
+                                <i class="fa-brands fa-windows text-slate-400 mr-1"></i> <span class="font-mono text-slate-700 bg-slate-200 px-1 rounded">Window</span> 폴더 &nbsp;|&nbsp; 
+                                <i class="fa-brands fa-apple text-slate-400 mr-1"></i> <span class="font-mono text-slate-700 bg-slate-200 px-1 rounded">Mac</span> 폴더
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex gap-5 relative">
+                <div class="step-line"></div>
+                <div class="step-badge">2</div>
+                <div class="flex-1 pt-1">
+                    <h2 class="text-lg font-bold mb-4 text-slate-800">설치 프로그램 실행</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Windows -->
+                        <div class="group border border-slate-200 rounded-xl p-4 hover:border-blue-300 hover:bg-blue-50/30 transition-all bg-white">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 rounded bg-blue-100 flex items-center justify-center text-blue-600">
+                                    <i class="fa-brands fa-windows text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-700 text-sm">Windows</h3>
+                            </div>
+                            <div class="text-xs text-slate-600 space-y-1.5">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-800 font-bold border border-slate-200">install.bat</span>
+                                    <span>우클릭</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 font-semibold text-blue-600">
+                                    <i class="fa-solid fa-shield-halved text-[10px]"></i> 관리자 권한으로 실행
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mac -->
+                        <div class="group border border-slate-200 rounded-xl p-4 hover:border-slate-300 hover:bg-slate-50/50 transition-all bg-white">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-8 h-8 rounded bg-slate-100 flex items-center justify-center text-slate-700">
+                                    <i class="fa-brands fa-apple text-lg"></i>
+                                </div>
+                                <h3 class="font-bold text-slate-700 text-sm">Mac</h3>
+                            </div>
+                            <div class="text-xs text-slate-600 space-y-1.5">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-800 font-bold border border-slate-200">install.sh</span>
+                                    <span>실행</span>
+                                </div>
+                                <div class="text-slate-400 italic">(터미널에서 실행 권장)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex gap-5 relative">
+                <div class="step-line"></div>
+                <div class="step-badge">3</div>
+                <div class="flex-1 pt-1">
+                    <h2 class="text-lg font-bold mb-2 text-slate-800">Word에 추가 (공통)</h2>
+                    <p class="text-slate-500 text-sm mb-4 font-medium">
+                        홈 탭 &gt; 추가 기능 &gt; <span class="text-blue-600 font-bold">더 많은 추가 기능</span>
+                    </p>
+
+                    <!-- UI Mockup: Ribbon -->
+                    <div class="bg-white border border-slate-200 rounded-lg shadow-sm mb-6 overflow-visible w-full">
+                        <div class="flex border-b border-slate-100 px-3 pt-2 text-xs gap-4 text-slate-400 bg-white rounded-t-lg">
+                            <span class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1.5 px-1">홈</span>
+                            <span class="pb-1.5">삽입</span>
+                            <span class="pb-1.5">그리기</span>
+                        </div>
+                        <div class="bg-slate-50 p-2 h-24 flex items-center justify-end pr-4 gap-2 relative rounded-b-lg">
+                            
+                            <!-- Add-ins Button -->
+                            <div class="relative">
+                                <div class="flex flex-col items-center justify-center px-2 py-1 bg-white border border-red-200 rounded shadow-sm z-10 relative h-12 min-w-[50px]">
+                                    <i class="fa-solid fa-border-all text-lg text-red-500 mb-0.5"></i>
+                                    <span class="text-[9px] font-bold text-slate-600">추가 기능</span>
+                                </div>
+                                
+                                <!-- Dropdown -->
+                                <div class="absolute top-full right-0 mt-2 w-48 bg-white border border-slate-200 shadow-xl rounded-lg z-20 overflow-hidden">
+                                    <div class="px-3 py-2 text-[10px] text-slate-400 bg-slate-50 border-b border-slate-100">인기 추가 기능...</div>
+                                    <div class="px-3 py-2 text-xs font-bold text-red-600 bg-red-50 flex items-center gap-2">
+                                        <i class="fa-solid fa-plus text-purple-600 text-xs"></i> 더 많은 추가 기능
+                                    </div>
+                                </div>
+
+                                <!-- Tooltip -->
+                                <div class="absolute top-3 -left-20 bg-yellow-300 text-yellow-900 text-[10px] font-bold py-0.5 px-2 rounded shadow-sm animate-bounce flex items-center gap-1 whitespace-nowrap z-30">
+                                    <span>클릭</span> 👉
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- UI Mockup: Add-ins Modal -->
+                    <div class="bg-white border border-slate-200 rounded-lg shadow-md overflow-hidden max-w-sm">
+                        <div class="px-4 py-3 border-b border-slate-100 bg-white">
+                            <h3 class="text-blue-600 font-bold text-sm mb-3">Office 추가 기능</h3>
+                            <div class="flex gap-4 text-xs font-medium">
+                                <span class="text-slate-400">내 추가 기능</span>
+                                <span class="text-slate-800 border-b-2 border-slate-800 pb-1">공유 폴더</span>
+                                <span class="text-slate-400">스토어</span>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-3">
+                            <!-- Item: Integralink -->
+                            <div class="flex items-center gap-3 p-2.5 bg-blue-50 border border-blue-200 rounded shadow-sm relative">
+                                <div class="w-8 h-8 bg-white border border-slate-200 rounded flex items-center justify-center shadow-sm">
+                                    <i class="fa-solid fa-infinity text-lg infinity-gradient"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-800">Integralink</div>
+                                    <div class="text-[10px] text-slate-500">Integralink</div>
+                                </div>
+                                <div class="absolute -top-2 -right-2 bg-blue-600 text-white w-5 h-5 rounded-full flex items-center justify-center shadow border-2 border-white text-[10px]">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex gap-5 relative">
+                <div class="step-badge">4</div>
+                <div class="flex-1 pt-1">
+                    <h2 class="text-lg font-bold mb-2 text-slate-800">실행 및 로그인</h2>
+                    <p class="text-slate-500 text-sm mb-4 font-medium">
+                        홈 탭 우측에 생성된 <span class="font-bold text-slate-800">[Open Integralink]</span> 버튼 클릭
+                    </p>
+
+                    <!-- UI Mockup: Final Ribbon -->
+                    <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden w-full">
+                        <div class="flex border-b border-slate-100 px-3 pt-2 text-xs gap-4 text-slate-400 bg-white">
+                            <span class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1.5 px-1">홈</span>
+                            <span class="pb-1.5">삽입</span>
+                            <span class="pb-1.5">그리기</span>
+                        </div>
+                        <div class="bg-slate-50 px-2 h-24 flex items-center justify-end pr-4">
+                            
+                            <div class="flex h-full py-1 gap-1">
+                                <!-- Add-ins Group -->
+                                <div class="flex flex-col items-center justify-center px-2 rounded opacity-50 grayscale scale-90">
+                                    <i class="fa-solid fa-border-all text-lg text-slate-400 mb-0.5"></i>
+                                    <span class="ribbon-label">추가 기능</span>
+                                </div>
+
+                                <div class="w-px bg-slate-300 my-2 mx-1 opacity-50"></div>
+
+                                <!-- Integralink Group -->
+                                <div class="flex flex-col items-center justify-between px-3 py-1 bg-white shadow-sm border border-blue-100 rounded cursor-pointer ring-1 ring-blue-50">
+                                    <div class="flex flex-col items-center justify-center h-full">
+                                        <i class="fa-solid fa-infinity text-xl infinity-gradient mb-0.5"></i>
+                                        <span class="text-[10px] text-slate-800 font-bold leading-none text-center">Open<br>Integralink</span>
+                                    </div>
+                                    <span class="ribbon-label text-blue-600 font-semibold mt-0.5">Integralink</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bg-slate-50 py-4 text-center border-t border-slate-100 rounded-b-3xl">
+            <p class="text-[10px] text-slate-400 font-medium tracking-widest uppercase">&copy; Integralink Quick Guide</p>
+        </div>
+    </div>
+
+</body>
+</html>
