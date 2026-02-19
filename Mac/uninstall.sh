@@ -2,21 +2,25 @@
 
 # Integralink Mac Uninstaller
 
-WEF_DIR="$HOME/Library/Containers/com.microsoft.Word/Data/Documents/wef"
-MANIFEST="$WEF_DIR/manifest.xml"
+# Target Paths (Add-in Manifest & Cache)
+MANIFEST_PATH="$HOME/Library/Containers/com.microsoft.Word/Data/Documents/wef/manifest.xml"
+CACHE_DIR="$HOME/Library/Containers/com.microsoft.Word/Data/Library/Caches/com.microsoft.Word/Wef"
 
-echo ""
-echo "========================================================"
-echo "   Integralink Word Add-in Uninstaller for Mac 🗑️"
-echo "========================================================"
-echo ""
-
-if [ -f "$MANIFEST" ]; then
-    rm "$MANIFEST"
-    echo "   [SUCCESS] manifest.xml removed. ✅"
+echo "   [1/2] Removing manifest file..."
+if [ -f "$MANIFEST_PATH" ]; then
+    rm "$MANIFEST_PATH"
+    echo "         Removed: $MANIFEST_PATH"
 else
-    echo "   [INFO] manifest.xml not found using this path."
-    echo "          (It might have been already removed)"
+    echo "         Not found: $MANIFEST_PATH"
+fi
+
+echo ""
+echo "   [2/2] Clearing Web Extension Framework (WEF) cache..."
+if [ -d "$CACHE_DIR" ]; then
+    rm -rf "$CACHE_DIR"
+    echo "         Cleared cache: $CACHE_DIR"
+else
+    echo "         Cache directory not found."
 fi
 
 echo ""
