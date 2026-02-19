@@ -11,8 +11,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Integralink" />
   <Description DefaultValue="AI-powered Word Add-in" />
-  <IconUrl DefaultValue="https://34.53.25.141.nip.io/assets/interalink-logo-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://34.53.25.141.nip.io/assets/interalink-logo-64.png" />
+  <IconUrl DefaultValue="https://integralink.trenxend.ai.kr/assets/interalink-logo-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://integralink.trenxend.ai.kr/assets/interalink-logo-64.png" />
   <SupportUrl DefaultValue="https://github.com" />
 
   <Hosts>
@@ -20,13 +20,13 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://34.53.25.141.nip.io/taskpane" />
+    <SourceLocation DefaultValue="https://integralink.trenxend.ai.kr/taskpane" />
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
 
   <AppDomains>
-    <AppDomain>https://34.53.25.141.nip.io</AppDomain>
+    <AppDomain>https://integralink.trenxend.ai.kr</AppDomain>
   </AppDomains>
 
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -72,13 +72,13 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://34.53.25.141.nip.io/assets/interalink-logo-16.png" />
-        <bt:Image id="Icon.32x32" DefaultValue="https://34.53.25.141.nip.io/assets/interalink-logo-32.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://34.53.25.141.nip.io/assets/interalink-logo-80.png" />
+        <bt:Image id="Icon.16x16" DefaultValue="https://integralink.trenxend.ai.kr/assets/interalink-logo-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://integralink.trenxend.ai.kr/assets/interalink-logo-32.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://integralink.trenxend.ai.kr/assets/interalink-logo-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://34.53.25.141.nip.io/commands.html" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://34.53.25.141.nip.io/taskpane" />
+        <bt:Url id="Commands.Url" DefaultValue="https://integralink.trenxend.ai.kr/commands.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://integralink.trenxend.ai.kr/taskpane" />
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
       </bt:Urls>
       <bt:ShortStrings>
